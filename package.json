@@ -1,0 +1,19 @@
+{
+  "name": "ejercicios-promesas",
+  "version": "1.0.0",
+  "description": "Ejercicios de las diferentes intuiciones de promesas",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha spec"
+  },
+  "keywords": [
+    "promises",
+    "intuition",
+    "iasc"
+  ],
+  "author": "IASC",
+  "license": "ISC"
+}
