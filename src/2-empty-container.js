@@ -1,7 +1,32 @@
-// TODO: Implement Promise
+function FullPromise(value) {
+  this._value = value;
+}
+
+FullPromise.prototype = {
+  value: function() {
+    return this._value;
+  },
+  hasValue: function() {
+    return true
+  }
+};
+
+var EmptyPromise = {
+  value: function() {
+    throw new Error("Empty Promise")
+  },
+  hasValue: function() {
+    return false
+  }
+}
+
 var Promise = {
-  full: function(value) {},
-  empty: function() {}
+  full: function(value) {
+    return new FullPromise(value)
+  },
+  empty: function() {
+    return EmptyPromise
+  }
 }
 
 // No cambiar inverse!

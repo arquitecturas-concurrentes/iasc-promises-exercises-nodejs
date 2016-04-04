@@ -1,5 +1,12 @@
-// TODO: Implement Promise
-function Promise() {}
+function Promise(value) {
+  this._value = value;
+}
+
+Promise.prototype = {
+  value: function() {
+    return this._value;
+  }
+};
 
 // No cambiar succ!
 function succ(num) {
