@@ -52,7 +52,7 @@ describe("Promise with a double container", function() {
     });
 
     it("returns the value stored on the promise", function() {
-      assert(this.inversePromise.rejectedValue() === "zero division");
+      assert(this.inversePromise.rejectedValue() === "Division by zero");
     });
 
     it("throws when asked for a resolved value", function() {

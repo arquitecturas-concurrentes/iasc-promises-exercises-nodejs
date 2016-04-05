@@ -8,7 +8,7 @@ var Promise = {
 // No cambiar inverse!
 function inverse(x) {
   if (x === 0) {
-    return Promise.reject("zero division");
+    return Promise.reject("Division by zero");
   } else {
     return Promise.resolve(1 / x);
   }
