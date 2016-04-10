@@ -6,6 +6,12 @@ function succ(num) {
    return new Promise(num + 1);
 }
 
+// No cambiar sideEffect!
+function sideEffect(toPrint) {
+	return new Promise(console.log(toPrint));
+}
+
 module.exports = {
-  succ: succ
+  succ: succ,
+  sideEffect: sideEffect
 };
