@@ -29,7 +29,7 @@ describe("Promise with an empty container", function() {
       assert(inversePromise.hasValue() === false);
     });
 
-    it("throws an error when asked for the value", function() {
+    it("throws an error with text 'Empty Promise' when asked for the value", function() {
       var inversePromise = inverse(0);
       assert.throws(function () {
         inversePromise.value()
