@@ -14,10 +14,11 @@ var inverse = require("../src/5-computation.js").inverse;
 
 describe("Promise as a computation", function() {
   context("onResolved", function () {
-    it("should return the result on the callback", function() {
+    it("should return the result on the callback", function(done) {
       var promise = inverse(4);
       promise.onResolved(function(result) { 
         assert(result === 0.25);
+        done();
       });
     });
 
@@ -30,10 +31,11 @@ describe("Promise as a computation", function() {
   });
 
   context("onRejected", function() {
-    it('should return the reject value on the callback', function() {
+    it('should return the reject value on the callback', function(done) {
       var promise = inverse(0);
       promise.onRejected(function(error) {
-        assert(error === 'Division by zero')
+        assert(error === 'Division by zero');
+        done();
       });
     });
 
